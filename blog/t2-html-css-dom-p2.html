@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Technical Blog II</title>
+  <link href="../styles/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <div id='header'>
+    <h1>Technical Blog II</h1>
+  </div>
+    
+  <div id='content'>
+    <div class="row">
+      <div class="col-6 col">
+          <h2>Grid-Based Design</h2>
+          <p>
+            HTML starts off arranging itself line by line, it's simple with just html to arrange elements vertically
+            in the way you'd like. Grid-based design involves splitting the webpage into columns and rows, this allows
+            content to sit side by side.
+            <br><br>
+            This can be done in a simple way by predefining a row class and column classes set at useful widths, each
+            row class uses flex box to fit the columns nicely side by side and a set of columns is chosen such that together they
+            take up the exact full width of the row-container they sit in. Any group of elements can be made to fit into the grid 
+            by adding one of the column classes to it's HTML tag
+          </p>
+      </div>
+      <div class="col-6 col">
+          <h2>Responsive Design</h2>
+          <p>
+            A webpage designed for a computer screen might not be that friendly on a phone screen, and vice versa. Responsive
+            design is the practice of making webpages that adjust to the specific screen and device they are being viewed on
+            so that the user experience is consistent/smooth across all devices.
+            <br><br>
+            This page responds to screen size by collapsing from 2 columns to 1.
+          </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 col">
+          <h2>Semantic Structure of HTML</h2>
+          <p>
+            While translating a design into HTML a first step is to split the page into rectangular portions,
+            in a grid layout or some other format. The next is to choose which elements are of the same type, which ones
+            are the most important etc. and set appropriate HTML tags. This allows for easy management, easy to read code 
+            and simple CSS access. This choice of types of HTML tag is the semantic structure. 
+          </p>
+      </div>
+      <div class="col-6 col">
+          <h2>Responsiveness without Scripting</h2>
+          <p>
+            I'm finding it interesting and user friendly that so much interactiveness and responsiveness is available with just HTML and CSS. 
+            I had expected the task of querying the device size and view window size to be part of the javascript.
+          </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
