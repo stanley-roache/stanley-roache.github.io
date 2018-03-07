@@ -1,0 +1,9 @@
+.menu-item-index {
+  text-align: center;
+}
+
+@media (min-width: 550px) {
+  #menu-index {
+    border-bottom: black 2px solid;
+  }
+}
