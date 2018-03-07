@@ -1,14 +1,21 @@
 #menu {
     display: inline-flex;
     flex-direction: column;
+    text-align: center;
+    border-bottom:  black solid 3px;
+    padding-top: 2em;
 }
 
 .menu-item {
     min-width: 8em;
 }
 
+#content {
+    padding-top: 5em;
+}
 
-@media (min-width: 550px) {
+
+@media (min-width: 400px) {
     #menu {
         flex-direction: row;
         flex-wrap: nowrap;
@@ -22,6 +29,14 @@ Mobile -> Desktop Breakpoint behaviour
 @media (min-width: 550px) {
     /* Menu switches from stacked horizontal to a vertical column to the left */
     #menu {
-        flex-direction: column; 
+        flex-direction: column;
+        text-align: left;
+        border-bottom: none;
+    }
+
+    #content {
+        border-left: black solid 3px;
+        padding-left: 5em;
+        padding-top: 2em;
     }
 }
