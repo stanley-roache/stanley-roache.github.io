@@ -1,9 +1,14 @@
+/* * {
+    border: solid red 2px;
+} */
+
 #menu {
     display: inline-flex;
     flex-direction: column;
     text-align: center;
     border-bottom:  black solid 3px;
     padding-top: 2em;
+    justify-content: space-between;
 }
 
 .menu-item {
@@ -12,6 +17,10 @@
 
 #content {
     padding-top: 5em;
+}
+
+#content-header {
+    text-align: center;
 }
 
 
@@ -32,11 +41,12 @@ Mobile -> Desktop Breakpoint behaviour
         flex-direction: column;
         text-align: left;
         border-bottom: none;
+        padding-top: 7em;
+        /* border-right: black solid 3px; */
     }
 
     #content {
-        border-left: black solid 3px;
-        padding-left: 5em;
+        padding-left: 5%;
         padding-top: 2em;
     }
 }
