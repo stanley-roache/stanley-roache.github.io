@@ -19,6 +19,19 @@
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color: black
+}
+
+a:visited {
+    color: #404040
+}
+
+a:hover {
+    opacity: 0.35;
+}
+
 
 @media (min-width: 400px) {
     #menu {
