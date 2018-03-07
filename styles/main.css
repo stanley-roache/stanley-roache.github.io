@@ -1,0 +1,8 @@
+#menu {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    min-width: 8em;
+}
