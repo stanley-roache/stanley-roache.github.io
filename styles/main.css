@@ -1,12 +1,27 @@
 #menu {
     display: inline-flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .menu-item {
     min-width: 8em;
 }
 
+
 @media (min-width: 550px) {
-    
+    #menu {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+/* 
+Mobile -> Desktop Breakpoint behaviour
+*/
+
+@media (min-width: 550px) {
+    /* Menu switches from stacked horizontal to a vertical column to the left */
+    #menu {
+        flex-direction: column; 
+    }
 }
