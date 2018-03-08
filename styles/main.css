@@ -2,10 +2,6 @@ ul, ol {
     list-style-position: outside;
 }
 
-#content-header {
-  white-space: nowrap;
-}
-
 #menu {
     display: inline-flex;
     flex-direction: column;
@@ -25,6 +21,7 @@ ul, ol {
 
 #content-header {
     text-align: center;
+    padding-bottom: 1em;
 }
 
 a {
@@ -58,7 +55,7 @@ Mobile -> Desktop Breakpoint behaviour
         flex-direction: column;
         text-align: left;
         border-bottom: none;
-        padding-top: 7em;
+        padding-top: 5em;
         /* border-right: black solid 3px; */
     }
 
@@ -69,5 +66,6 @@ Mobile -> Desktop Breakpoint behaviour
 
     #content-header {
         text-align: left;
+        border-bottom: black 2px solid;
     }
 }
