@@ -24,6 +24,10 @@ ul, ol {
     padding-bottom: 1em;
 }
 
+nav {
+  position: fixed;
+}
+
 a {
     text-decoration: none;
     color: black
