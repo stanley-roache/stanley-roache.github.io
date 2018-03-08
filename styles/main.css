@@ -58,4 +58,8 @@ Mobile -> Desktop Breakpoint behaviour
         padding-left: 5%;
         padding-top: 2em;
     }
+
+    #content-header {
+        text-align: left;
+    }
 }
