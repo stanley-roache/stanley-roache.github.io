@@ -1,3 +1,7 @@
+ul, ol {
+  list-style-position: outside;
+}
+
 .menu-item-index {
   text-align: center;
 }

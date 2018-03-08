@@ -1,3 +1,7 @@
+ul, ol {
+    list-style-position: outside;
+}
+
 #menu {
     display: inline-flex;
     flex-direction: column;
