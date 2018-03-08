@@ -2,6 +2,10 @@ ul, ol {
     list-style-position: outside;
 }
 
+#content-header {
+  white-space: nowrap;
+}
+
 #menu {
     display: inline-flex;
     flex-direction: column;
