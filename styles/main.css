@@ -26,6 +26,7 @@ ul, ol {
 
 nav {
   position: fixed;
+  width: 100%;
 }
 
 a {
