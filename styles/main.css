@@ -24,6 +24,10 @@ ul, ol {
     padding-bottom: 1em;
 }
 
+h3 {
+  font-style: italic;
+}
+
 a {
     text-decoration: none;
     color: black
@@ -37,6 +41,9 @@ a:hover {
     opacity: 0.35;
 }
 
+/* 
+Breakpoint behaviour
+*/
 
 @media (min-width: 400px) {
     #menu {
@@ -44,10 +51,6 @@ a:hover {
         flex-wrap: nowrap;
     }
 }
-
-/* 
-Mobile -> Desktop Breakpoint behaviour
-*/
 
 @media (min-width: 550px) {
     /* Menu switches from stacked horizontal to a vertical column to the left */
