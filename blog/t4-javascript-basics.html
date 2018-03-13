@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technical Blog IV: Javascript Basics</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="three columns" id="menu">
+          <div class="menu-item"><h4>
+            <a href="../index.html">Home</a>
+          </h4></div>
+          <div class="menu-item"><h4>
+            <a href="index.html">Archives</a>
+          </h4></div>
+          <div class="menu-item"><h4>About</h4></div>
+        </div>
+
+        <div class="nine columns" id="content">
+          <h1 id="content-header">Javascript Basics</h1>
+          <h2>How does Javascript compare to HTML and CSS?</h2>
+          <p>
+            HTML and CSS for the most part are very static, they decide the layout and appearance of a site but very little about what the site does.
+            What happens when you push buttons? Where does the information go when you fill out a form? What if you need the site
+            to do something for you when you ask it.
+            <br><br>
+            Javascript is a language that controls almost all of these active aspects of the site and is very different code to look at.
+            It's like the nervous system of your body. All the thinking happens there and it's the source of all action on your website.
+          </p>
+          <h2>Control Flow</h2>
+          <p>
+            Everytime a piece of javascript code get's run (executed) in the browser, the browser is running one instruction at a time.
+            Most of the time this just means the lines of code are executed in order.
+            <br><br>
+            With loops and functions it is possible to repeat some code until a certain condition is achieved, or jump to another section of code 
+            entirely, do what it says there, then jump back. The flow of control is the order or pattern in which the lines of code are run. 
+            Let's use waking up and eating breakfast as an example, maybe a morning looks like this:
+          </p>
+          <ol>
+            <li>Wake up.</li>
+            <li>Get up and stretch.</li>
+            <li>Repeat this until not hungry:
+              <ol>
+                <li>Put piece of bread in toaster.</li>
+                <li>Spread butter and marmite on toast.</li>
+                <li>Eat toast</li>
+              </ol>
+            </li>
+            <li>Do the brushing teeth routine.</li>
+            <li>Is it a weekday? If yes, get ready for work. Otherwise read a book.</li>
+            <li>Brushing teeth routine:
+              <ol>
+                <li>Put toothpaste on toothbrush</li>
+                <li>Brush teeth</li>
+                <li>Rinse mouth with water</li>
+                <li>Go back to what you were doing before</li>
+              </ol>
+            </li>
+          </ol>
+          <p>
+            If we start at the top and follow the instructions, clearly they aren't all going to happen in the order they're written. 
+            At 3. eating breakfast the flow of control goes into a <em>loop</em> until a condition (hunger) is satisfied.
+            Later the flow of control jumps from breakfast to the teeth brushing routine and back to where it left off, in real application a section of code 
+            like this is called a <em>function</em>, when a function is called all the instructions inside it get run. Later on 
+            we get a point in the code that looks like it's going to branch into two options, weekday or weekend. So these 
+            are some ways that real flow of control in code might work.
+          </p>
+          <h2>Arrays and Objects</h2>
+          <p>
+            These are both ways to store a collection of data. An array is a set of items in a specific order, you refer to an item (element) in the 
+            array by its <em>index</em>. The index is the position of the item in the array starting at 0 so if you want the 20th item in an array you ask for <code>array[19]</code>. If you
+            want the first item - <code>array[0]</code>.
+            <br><br>
+            Data inside objects are stored with labels, so when you access an item you ask for it by it's label. You might want to know the number 
+            of seats stored in the object 'car', you'd refer to it with: <code>car.numberOfSeats</code>
+          </p>
+          <h2>Functions</h2>
+          <p>
+            A function is a collection of code with it's own name that can be <em>called</em> - requested from somewhere else in the script. Functions can take input values or objects
+            and can also return values. For example you might be writing some code in which you frequently need to find the greatest number in a list of numbers. 
+            You could write a function <code>findGreatestNumber(list) {code that does the job}</code>. Now that it's written you can ask for this to happen from anywhere
+            in the script.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+</html>
