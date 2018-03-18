@@ -16,3 +16,12 @@ ul, ol {
     border-bottom: black 2px solid;
   }
 }
+
+a:hover {
+  opacity: 1;
+}
+
+.menu-item-index > a:hover, h4 > a:hover{
+  color: transparent;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
