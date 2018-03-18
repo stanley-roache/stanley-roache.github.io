@@ -21,7 +21,23 @@ a:hover {
   opacity: 1;
 }
 
+
+/* CSS for blurring text. */
+@keyframes blur {
+  from {
+    color: black;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  to {
+    color: transparent;
+    text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
+  }
+}
+
 .menu-item-index > a:hover, h4 > a:hover{
+  animation-name: blur;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
   color: transparent;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
 }
