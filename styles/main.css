@@ -2,28 +2,6 @@ ul, ol {
     list-style-position: outside;
 }
 
-#menu {
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    border-bottom:  black solid 3px;
-    padding-top: 2em;
-    justify-content: space-between;
-}
-
-.menu-item {
-    min-width: 8em;
-}
-
-#content {
-    padding-top: 5em;
-}
-
-#content-header {
-    text-align: center;
-    padding-bottom: 1em;
-}
-
 h3 {
   font-style: italic;
 }
@@ -39,36 +17,4 @@ a:visited {
 
 a:hover {
     opacity: 0.35;
-}
-
-/* 
-Breakpoint behaviour
-*/
-
-@media (min-width: 400px) {
-    #menu {
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-}
-
-@media (min-width: 550px) {
-    /* Menu switches from stacked horizontal to a vertical column to the left */
-    #menu {
-        flex-direction: column;
-        text-align: left;
-        border-bottom: none;
-        padding-top: 5em;
-        /* border-right: black solid 3px; */
-    }
-
-    #content {
-        padding-left: 5%;
-        padding-top: 2em;
-    }
-
-    #content-header {
-        text-align: left;
-        border-bottom: black 2px solid;
-    }
 }
