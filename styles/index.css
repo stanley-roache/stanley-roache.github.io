@@ -10,21 +10,9 @@ ul, ol {
   padding-top: 5em;
 }
 
+/* Breakpoint behaviour */
 @media (min-width: 550px) {
   #menu-index {
     border-bottom: black 2px solid;
   }
-}
-
-a {
-  text-decoration: none;
-  color: black
-}
-
-a:visited {
-  color: #404040
-}
-
-a:hover {
-  opacity: 0.35;
 }
