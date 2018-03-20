@@ -21,23 +21,19 @@ a:hover {
   opacity: 1;
 }
 
+/* CSS Blurring transition. The effect is created with text shadow and transparency.
+ */
 
-/* CSS for blurring text. */
-@keyframes blur {
-  from {
-    color: black;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-  to {
-    color: transparent;
-    text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
-  }
+
+/* Initial values must be explicit so that the transition also works in reverse */
+.menu-item-index > a, h4 > a {
+  color: black;
+  text-shadow: none;
+  /* code out this one line to have the changes be instant */
+  transition: all 1s;
 }
 
-.menu-item-index > a:hover, h4 > a:hover{
-  animation-name: blur;
-  animation-timing-function: ease-out;
-  animation-duration: 0.5s;
+.menu-item-index > a:hover, h4 > a:hover {
   color: transparent;
   text-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
 }
