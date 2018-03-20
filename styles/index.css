@@ -29,7 +29,7 @@ a:hover {
 .menu-item-index > a, h4 > a {
   color: black;
   text-shadow: none;
-  /* code out this one line to have the changes be instant */
+  /* comment out this one line to have the changes be instant */
   transition: all 1s;
 }
 
