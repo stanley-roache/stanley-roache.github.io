@@ -25,11 +25,11 @@
         </div>
 
         <div class="nine columns" id="content">
-          <h1 id="content-header">Javascript</h1>
-          <h2>Parentheses () uses</h2>
+          <h1 id="content-header">Brackets in Javascript</h1>
+          <h2>Parentheses () uses:</h2>
           <ul>
             <li>
-              Calling or defining a function:
+              Calling or defining a function
               <ul>
                 <li>
                   <code>
@@ -40,7 +40,7 @@
                   </code>
                 </li>
                 <li>
-                  <code>result = doSomething(argument)</code>
+                  <code>result = doSomething(...)</code>
                 </li>
               </ul>
               
@@ -49,10 +49,10 @@
               evaluating boolean conditions
               <ul>
                 <li>
-                  <code>while (condition) {}</code>
+                  <code>while (condition) {...}</code>
                 </li>
                 <li>
-                  <code>if (condition) command;</code>
+                  <code>if (condition) {...}</code>
                 </li>
               </ul>
             </li>
@@ -74,29 +74,21 @@
           <h2>Curly bracket {} uses</h2>
           <ul>
             <li>
-              function definitions: <code>function(arguments) {commands}</code>
+              function definitions: <code>function(...) {commands}</code>
             </li>
             <li>
               code inside conditional tests and loops: 
-              <pre>
-                <code>
-                  if (..) { 
-                    while (..) { 
-                      commands 
-                    } 
-                  }</code>
-              </pre>
+              <ul>
+                <li>
+                  <code>if (...) {commands}</code>
+                </li>
+                <li>
+                  <code>while (...) {commands}</code>
+                </li>
+              </ul>
             </li>
             <li>
-              Defining objects:
-              <pre>
-                <code>
-                  object = {
-                    property1: value
-                    ...
-                  }
-                </code>
-              </pre>
+              Defining objects: <code>object = {property: value, ...}</code>
             </li>
           </ul>
 
