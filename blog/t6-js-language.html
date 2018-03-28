@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Technical Blog VI: Javascript Language</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/blog.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="three columns" id="menu">
+          <div class="menu-item"><h4>
+            <a href="../index.html">Home</a>
+          </h4></div>
+          <div class="menu-item"><h4>
+            <a href="index.html">Archive</a>
+          </h4></div>
+          <div class="menu-item"><h4>About</h4></div>
+        </div>
+
+        <div class="nine columns" id="content">
+          <h1 id="content-header">Javascript</h1>
+          <h2>Parentheses () uses</h2>
+          <ul>
+            <li>
+              Calling or defining a function:
+              <ul>
+                <li>
+                  <code>
+                    function doSomething(arguments) {
+                      commands;
+                      return ...;
+                    }
+                  </code>
+                </li>
+                <li>
+                  <code>result = doSomething(argument)</code>
+                </li>
+              </ul>
+              
+            </li>
+            <li>
+              evaluating boolean conditions
+              <ul>
+                <li>
+                  <code>while (condition) {}</code>
+                </li>
+                <li>
+                  <code>if (condition) command;</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Giving priority in mathematical operations: <code>(index+1)%index</code>
+            </li>
+          </ul>
+
+          <h2>Square bracket [] uses</h2>
+          <ul>
+            <li>
+              defining, accessing and modifying arrays: <code>array[0] = item1</code>
+            </li>
+            <li>
+              accessing and modifying/creating javascript object properties: <code>object['propertyName'] = property</code>
+            </li>
+          </ul>
+
+          <h2>Curly bracket {} uses</h2>
+          <ul>
+            <li>
+              function definitions: <code>function(arguments) {commands}</code>
+            </li>
+            <li>
+              code inside conditional tests and loops: 
+              <pre>
+                <code>
+                  if (..) { 
+                    while (..) { 
+                      commands 
+                    } 
+                  }</code>
+              </pre>
+            </li>
+            <li>
+              Defining objects:
+              <pre>
+                <code>
+                  object = {
+                    property1: value
+                    ...
+                  }
+                </code>
+              </pre>
+            </li>
+          </ul>
+
+          <h2>Quotation Marks " '</h2>
+          <p>
+            Single and double quotation marks can be used interchangably in javascript, they both get used to define strings. 
+            It's possible to use single quotation mark inside a string bounded by double marks or vice versa and have 
+            them not treated as special characters: "It's great" and 'This is a "string"'
+            <br><br>
+            To nest the same kind of quote marks inside a string you have to use a backslash (escape character) to request 
+            they not get treated as special characters "He said 'She said \"He said\"'".
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+</html>
