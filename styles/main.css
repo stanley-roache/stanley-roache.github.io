@@ -19,3 +19,7 @@ a:visited {
 a:hover {
     opacity: 0.35;
 }
+
+img {
+  width: 100%
+}

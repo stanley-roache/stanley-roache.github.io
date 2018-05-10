@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Techincal Blog VII: Scope</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/blog.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="three columns" id="menu">
+          <div class="menu-item"><h4>
+            <a href="../index.html">Home</a>
+          </h4></div>
+          <div class="menu-item"><h4>
+            <a href="index.html">Archive</a>
+          </h4></div>
+          <div class="menu-item"><h4>About</h4></div>
+        </div>
+
+        <div class="nine columns" id="content">
+          <h1 id="content-header">What is Scope?</h1>
+          <p>
+            All throught a given section of javascript there will be variables being created and referred to. One thing we need to know is 
+            <i>what variables are visible from a given location in the code?</i> To answer this question we need to understand scope.
+            <br><br>
+            Here's some code: 
+          </p>
+          <pre><code>
+            var i = 'some value'
+            function func() {
+              var x = 'some other value
+              console.log(i,x);
+            }
+            console.log(i,x);
+          </code></pre>
+          <p>
+            This code can be broken down into sections (called scopes). The outermost section that contains everything is called the 'global scope'.
+            <br><em>Variables defined in the global scope are visible everywhere in the code</em>.
+            <br><br>
+            In javascript each function creates a new scope inside it's curly braces, this creates a pattern of scopes inside scopes which looks 
+            a lot like the boxifying diagrams from a few sprints ago. Since we can have functions inside functions inside functions, in a given portion of code,
+            we get a nested structure of scopes.
+          </p>
+          <img src="../images/basic-scope.png" alt="diagram of scope relationship">
+          <p>
+            Running the code above we get one error, the second console.log statement doesn't know what x is. This is because
+            <em>variables are not visible outside their scope, but they are visible to all 'child' scopes inside of the scope where they 
+              are defined.
+            </em>
+            <br><br>
+            This is why 'x' can see 'i' but not the other way around.
+          </p>
+          <h2>Closures</h2>
+          <p>
+            When a function is created, it keeps a complete set of references to the variables visible to it <i>at the time of creation</i>.
+            This set of variables is called the <i>closure</i> and allows for some nifty tricks.
+            <br><br>
+            Here's an example to illustrate:
+          </p>
+          <pre><code>
+            var statement = 'original statement';
+
+            function makeFlexiblePrinter() {
+              return function() {
+                console.log(statement);
+              }
+            }
+
+            function makeFixedPrinter() {
+              // we copy our statement to a local variable
+              let secretCopy = statement; 
+              return function() {
+                console.log(secretCopy);
+              }
+            }
+
+            var fixedPrinter = makeFixedPrinter(),
+                flexiblePrinter = makeFlexiblePrinter();
+            statement = 'new statement';
+            fixedPrinter(); // outputs 'original statement';
+            flexiblePrinter(); //outputs 'new statement';
+          </code></pre>
+          <p>
+            The two 'printer maker' functions in this code both return functions that are going to return some kind of statement. 
+            What happens to the 'localCopy' variable? Even though this variable should dissapear along with it's parent function it lives on even after
+            we change the original statement variable.
+            <br><br>
+            This is because when we create the fixed printer the variable 'localCopy' is visible, as well as the 'statement' variable, 
+            so a reference pointing to each of these get included in the closure. This means the printer can see both the copy of original 
+            statement and the current statement after changes, it has a secret variable in it's closure.
+            <br><br>
+            In contrast at the time we are making the flexible printer the only visible variable is 'statement' so when a change is made this 
+            printer has no memory of the original statement.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  </body>
+</html>
